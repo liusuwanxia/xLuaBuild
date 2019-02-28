@@ -12,12 +12,12 @@ function start()
 	print("injected object", lightObject)
 	lightCpnt= lightObject:GetComponent(typeof(CS.UnityEngine.Light))
 
-	local rapidjson = require('rapidjson')
-	local t = rapidjson.decode('{"a":123}')
-	print(t.a)
-	t.a = 456
-	local s = rapidjson.encode(t)
-	print('json', s)
+	-- local rapidjson = require('rapidjson')
+	-- local t = rapidjson.decode('{"a":123}')
+	-- print(t.a)
+	-- t.a = 456
+	-- local s = rapidjson.encode(t)
+	-- print('json', s)
 
 	print("cmsgpack test")
 	local cmsgpack = require('cmsgpack')

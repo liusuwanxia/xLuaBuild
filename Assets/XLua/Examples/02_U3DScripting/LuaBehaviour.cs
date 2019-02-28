@@ -51,7 +51,7 @@ public class LuaBehaviour : MonoBehaviour {
         }
 
         luaEnv.DoString(luaScript.text, "LuaBehaviour", scriptEnv);
-        luaEnv.AddBuildin("rapidjson", XLua.LuaDLL.Lua.LoadRapidJson);
+        // luaEnv.AddBuildin("rapidjson", XLua.LuaDLL.Lua.LoadRapidJson);
         luaEnv.AddBuildin("cmsgpack", XLua.LuaDLL.Lua.LoadCMsgPack);
 
         Action luaAwake = scriptEnv.Get<Action>("awake");
