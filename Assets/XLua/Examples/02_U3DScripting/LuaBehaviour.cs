@@ -7,6 +7,7 @@
 */
 
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using XLua;
@@ -22,6 +23,7 @@ public class Injection
 [LuaCallCSharp]
 public class LuaBehaviour : MonoBehaviour {
     public TextAsset luaScript;
+    public Text m_TextMsgPack;
     public Injection[] injections;
 
     internal static LuaEnv luaEnv = new LuaEnv(); //all lua behaviour shared one luaenv only!

@@ -9,5 +9,15 @@ function start()
 
 	self:GetComponent("Button").onClick:AddListener(function()
 		print("clicked, you input is '" ..input:GetComponent("InputField").text .."'")
+		print("cmsgpack test")
+		local cmsgpack = require('cmsgpack')
+		obj1 = 1
+		obj2 = 2
+		obj3 = "Hello"
+		msgpack = cmsgpack.pack(obj1,obj2,obj3)
+		obj1, obj2, obj3 = cmsgpack.unpack(msgpack)
+		print(obj1, obj2, obj3)
+		self.m_TextMsgPack.text = obj1 .. obj2 .. obj3
+		
 	end)
 end
